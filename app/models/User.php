@@ -42,6 +42,7 @@ class User extends Authenticatable
 
     public static function store($data)
     {
+        $data = (object) $data;
         return self::create([
             'username' => $data->username,
             'email' => $data->email,

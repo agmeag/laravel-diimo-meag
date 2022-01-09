@@ -70,7 +70,7 @@
 </head>
 
 <body>
-    <form class="form-cnt" action="api/password/resetPassword" method="POST">
+    <form class="form-cnt" action="/api/password/resetPassword" method="POST">
         <div class="forgot-psw-title">Forgot Password?</div>
         <input class="input-cnt" name="email" hidden placeholder="Enter email" value="{{request()->get('email')}}">
         <input class="input-cnt" name="password" placeholder="Enter new password">
