@@ -54,6 +54,7 @@ class ProductController extends Controller
         $search = $request->get('search');
         $type = $request->type ?? Product::BY_NAME;
         if ($search) {
+            // $search=strtolower($search);
             if ($type == Product::BY_NAME) {
                 $list = $list->searchByName($search)->paginate(10);
             } else if ($type == Product::BY_SKU) {

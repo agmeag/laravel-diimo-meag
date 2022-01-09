@@ -22,13 +22,13 @@ class Product extends Model
 
     public function searchByName($search)
     {
-        return Product::where('nombre', 'like', "%$search%");
+        $search = ' ' . "'%" . $search . "%'";
+        return Product::whereRaw('(nombre) LIKE' . $search);
     }
 
     public function searchBySKU($search)
     {
-        return Product::where('SKU', 'like', "%$search%");
+        $search = ' ' . "'%" . $search . "%'";
+        return Product::whereRaw('(SKU) LIKE' . $search);
     }
-
-
 }

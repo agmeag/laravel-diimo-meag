@@ -17,8 +17,8 @@ class CreateProductTable extends Migration
             $table->bigIncrements('id');
             $table->string("SKU")->nullable();
             $table->string("nombre");
-            $table->string("cantidad");
-            $table->string("precio");
+            $table->integer("cantidad");
+            $table->double("precio");
             $table->string("descripcion")->nullable();
             $table->string("imagen")->nullable();
             $table->timestamps();
